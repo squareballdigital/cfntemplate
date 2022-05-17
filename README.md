@@ -1,16 +1,16 @@
-# @cfnboost/template
+# @squareball/cfntemplate
 
 This package contains type definitions for AWS CloudFormation templates, so that you can create CloudFormation templates in code.
 
 ## Documentation
 
-See [documentation](https://cfnboost.github.io/template/).
+See [documentation](https://squareballdigital.github.io/cfntemplate/).
 
 ## Example
 
 ```typescript
-import { ResourceType } from '@cfnboost/resources';
-import { Fn, Template, makePolicyDocument } from '@cfnboost/template';
+import { Fn, Template, makePolicyDocument } from '@squareball/cfntemplate';
+import { ResourceType } from '@squareball/cfntypes';
 
 const template: Template = {
   Resources: {

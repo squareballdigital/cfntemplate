@@ -3,7 +3,7 @@ import {
   ResourceAttributes,
   ResourceType,
   ResourceTypes,
-} from '@cfnboost/resources';
+} from '@squareball/cfntypes';
 import {
   ResourceDefinition,
   ResourceOptions,

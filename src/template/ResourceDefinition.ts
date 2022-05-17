@@ -1,4 +1,4 @@
-import { ResourceType, ResourceTypes } from '@cfnboost/resources';
+import { ResourceType, ResourceTypes } from '@squareball/cfntypes';
 import { CreationPolicy } from './CreationPolicy.js';
 import { DeletionPolicy } from './DeletionPolicy.js';
 import { IntrinsicValue } from './Fn.js';
