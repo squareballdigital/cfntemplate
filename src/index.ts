@@ -1,4 +1,5 @@
 // AUTO-GENERATED node ../makeIndex.js
+export * from './composition/BuilderContext.js';
 export * from './composition/makeAwsResource.js';
 export * from './composition/makeAwsResourceAttributes.js';
 export * from './composition/makeCondition.js';

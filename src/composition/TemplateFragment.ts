@@ -5,6 +5,7 @@ import { ResourceDefinition } from '../template/ResourceDefinition.js';
 import { RuleDefinition } from '../template/RuleDefinition.js';
 import { Template } from '../template/Template.js';
 import { TemplateMap } from '../template/TemplateMap.js';
+import { BuilderContext } from './BuilderContext.js';
 import { TemplateBuilder, TemplateBuilderFn } from './TemplateBuilder.js';
 
 /**
@@ -32,8 +33,8 @@ export class TemplateFragment implements TemplateBuilder {
    * Combine two or more builders to create one {@link TemplateFragment}.
    */
   public static compose(...builders: TemplateBuilder[]): TemplateFragment {
-    return new this((template) =>
-      builders.reduce((t, b) => b.build(t), template),
+    return new this((template, ctx) =>
+      builders.reduce((t, b) => b.build(t, ctx), template),
     );
   }
 
@@ -151,7 +152,10 @@ export class TemplateFragment implements TemplateBuilder {
   /**
    * Build the template.
    */
-  public build(template: Template = { Resources: {} }): Template {
-    return this._build(template);
+  public build(
+    template: Template = { Resources: {} },
+    ctx = new BuilderContext(),
+  ): Template {
+    return this._build(template, ctx);
   }
 }
