@@ -13,6 +13,14 @@ import { UpdatePolicy } from './UpdatePolicy.js';
  */
 export interface ResourceOptions {
   /**
+   * The name of a condition to associate with the resource. The resource will
+   * only be created if the condition evaluates to true.
+   *
+   * @see {@link https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/conditions-section-structure.html | Conditions}
+   */
+  Condition?: string;
+
+  /**
    * Associate the `CreationPolicy` attribute with a resource to prevent its
    * status from reaching create complete until AWS CloudFormation receives a
    * specified number of success signals or the timeout period is exceeded. To
