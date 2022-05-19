@@ -5,7 +5,7 @@ import { ResourceDefinition } from '../template/ResourceDefinition.js';
 import { RuleDefinition } from '../template/RuleDefinition.js';
 import { Template } from '../template/Template.js';
 import { TemplateMap } from '../template/TemplateMap.js';
-import { BuilderContext } from './BuilderContext.js';
+import { BuilderContext, BuilderContextProvider } from './BuilderContext.js';
 import { TemplateBuilder, TemplateBuilderFn } from './TemplateBuilder.js';
 
 /**
@@ -154,7 +154,7 @@ export class TemplateFragment implements TemplateBuilder {
    */
   public build(
     template: Template = { Resources: {} },
-    ctx = new BuilderContext(),
+    ctx: BuilderContext = new BuilderContextProvider(),
   ): Template {
     return this._build(template, ctx);
   }

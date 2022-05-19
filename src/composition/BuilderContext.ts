@@ -2,7 +2,11 @@ export interface ContextConstructor<T> {
   new (): T;
 }
 
-export class BuilderContext {
+export interface BuilderContext {
+  get<T>(ctor: ContextConstructor<T>): T;
+}
+
+export class BuilderContextProvider implements BuilderContext {
   private readonly ctx = new Map<object, any>();
 
   public get<T>(ctor: ContextConstructor<T>): T {
