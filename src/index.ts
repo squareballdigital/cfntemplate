@@ -13,6 +13,7 @@ export * from './composition/makeParameters.js';
 export * from './composition/makeResourceAttributes.js';
 export * from './composition/makeRule.js';
 export * from './composition/ResourceInstance.js';
+export * from './composition/ResourceInstanceType.js';
 export * from './composition/TemplateBuilder.js';
 export * from './composition/TemplateFragment.js';
 export * from './policy/makePolicyDocument.js';

@@ -5,6 +5,7 @@ import {
   ResourceOptions,
 } from '../template/ResourceDefinition.js';
 import { ResourceInstance } from './ResourceInstance.js';
+import { ResourceInstanceType } from './ResourceInstanceType.js';
 import { TemplateBuilder } from './TemplateBuilder.js';
 import { TemplateFragment } from './TemplateFragment.js';
 
@@ -23,7 +24,7 @@ export function makeCustomResource<
   props: P,
   opts?: ResourceOptions,
   attribs?: (keyof A)[],
-): [TemplateBuilder, ResourceInstance<A>] {
+): [TemplateBuilder, ResourceInstanceType<A>] {
   return [
     TemplateFragment.resource(name, {
       ...opts,

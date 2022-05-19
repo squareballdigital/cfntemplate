@@ -9,6 +9,7 @@ import {
   ResourceOptions,
 } from '../template/ResourceDefinition.js';
 import { ResourceInstance } from './ResourceInstance.js';
+import { ResourceInstanceType } from './ResourceInstanceType.js';
 import { TemplateBuilder } from './TemplateBuilder.js';
 import { TemplateFragment } from './TemplateFragment.js';
 
@@ -22,7 +23,7 @@ export function makeAwsResource<T extends ResourceType>(
   name: string,
   props: ResourceTypes[T],
   opts?: ResourceOptions,
-): [TemplateBuilder, ResourceInstance<AttributeTypeFor<T>>] {
+): [TemplateBuilder, ResourceInstanceType<AttributeTypeFor<T>>] {
   return [
     TemplateFragment.resource(name, {
       ...opts,
