@@ -18,8 +18,8 @@ export function makeCustomResource<
   P extends CustomResourcePropertiesBase,
   A extends object = never,
 >(
-  name: string,
   type: CustomResourceType<T>,
+  name: string,
   props: P,
   opts?: ResourceOptions,
   attribs?: (keyof A)[],

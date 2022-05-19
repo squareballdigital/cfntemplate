@@ -18,8 +18,8 @@ import { TemplateFragment } from './TemplateFragment.js';
  * @see {@link https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resources-section-structure.html | Resources}
  */
 export function makeAwsResource<T extends ResourceType>(
-  name: string,
   type: T,
+  name: string,
   props: ResourceTypes[T],
   opts?: ResourceOptions,
 ): [TemplateBuilder, ResourceInstance<AttributeTypeFor<T>>] {
