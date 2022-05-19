@@ -36,3 +36,6 @@ export * from './template/RuleDefinition.js';
 export * from './template/Template.js';
 export * from './template/TemplateMap.js';
 export * from './template/UpdatePolicy.js';
+export * from './util/bucketArn.js';
+export * from './util/formatArn.js';
+export * from './util/localArn.js';
