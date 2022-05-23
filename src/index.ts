@@ -8,6 +8,7 @@ export * from './composition/makeCustomResource.js';
 export * from './composition/makeMapping.js';
 export * from './composition/makeMetadata.js';
 export * from './composition/makeOutput.js';
+export * from './composition/makeOutputs.js';
 export * from './composition/makeParameter.js';
 export * from './composition/makeParameters.js';
 export * from './composition/makeResourceAttributes.js';
